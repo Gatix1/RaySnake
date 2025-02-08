@@ -121,16 +121,16 @@ public:
     }
     
     void HandleInput() {
-        if (IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_W) && (prevDirection.y != 1) && (direction.y != 1)) {
+        if ((IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_W)) && (prevDirection.y != 1) && (direction.y != 1)) {
             direction = { 0, -1 };
         }
-        if (IsKeyPressed(KEY_DOWN) || IsKeyPressed(KEY_S) && (prevDirection.y != -1) && (direction.y != -1)) {
+        if ((IsKeyPressed(KEY_DOWN) || IsKeyPressed(KEY_S)) && (prevDirection.y != -1) && (direction.y != -1)) {
             direction = { 0, 1 };
         }
-        if (IsKeyPressed(KEY_RIGHT) || IsKeyPressed(KEY_D) && (prevDirection.x != -1) && (direction.x != -1)) {
+        if ((IsKeyPressed(KEY_RIGHT) || IsKeyPressed(KEY_D)) && (prevDirection.x != -1) && (direction.x != -1)) {
             direction = { 1, 0 };
         }
-        if (IsKeyPressed(KEY_LEFT) || IsKeyPressed(KEY_A) && (prevDirection.x != 1) && (direction.x != 1)) {
+        if ((IsKeyPressed(KEY_LEFT) || IsKeyPressed(KEY_A)) && (prevDirection.x != 1) && (direction.x != 1)) {
             direction = { -1, 0 };
         }
     }
